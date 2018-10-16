@@ -141,6 +141,10 @@ hr.small {
   margin: 5px 5px 0 0;
 }
 
+#menu-close {
+  text-indent: 0;
+}
+
 /* Header */
 
 .header {
