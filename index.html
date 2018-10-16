@@ -3,10 +3,6 @@
 
 <head>
   <title>Агентство недвижимости</title>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/stylish-portfolio.css" rel="stylesheet" type="text/css">
 
@@ -165,23 +161,6 @@
   </section>
 
 
-  <script>
-    ymaps.ready(init);
-    function init() {
-      var map = new ymaps.Map("map", {
-        center: [55.740684, 37.618174],
-        zoom: 15
-      });
-      map.behaviors.disable('scrollZoom');
-      placemark = new ymaps.Placemark([55.740684, 37.618174], {
-        hintContent: 'Твой Дом',
-        balloonContentHeader: 'Твой Дом',
-        balloonContentBody: 'Москва, Старомонетный переулок, 10'
-      });
-      map.geoObjects.add(placemark);
-    }
-  </script>
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -210,7 +189,27 @@
   </footer>
 
 
-  <!-- Custom Theme JavaScript -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+  <script>
+    ymaps.ready(init);
+    function init() {
+      var map = new ymaps.Map("map", {
+        center: [55.740684, 37.618174],
+        zoom: 15
+      });
+      map.behaviors.disable('scrollZoom');
+      placemark = new ymaps.Placemark([55.740684, 37.618174], {
+        hintContent: 'Твой Дом',
+        balloonContentHeader: 'Твой Дом',
+        balloonContentBody: 'Москва, Старомонетный переулок, 10'
+      });
+      map.geoObjects.add(placemark);
+    }
+  </script>
+
   <script>
     // Closes the sidebar menu
     $("#menu-close").click(function (e) {
