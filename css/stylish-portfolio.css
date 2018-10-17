@@ -234,3 +234,8 @@ hr.small {
 footer {
   padding: 100px 0;
 }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
